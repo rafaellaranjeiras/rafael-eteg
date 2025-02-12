@@ -19,17 +19,12 @@ Este projeto é um formulário de cadastro de clientes desenvolvido em Java com 
  cd .\rafael-eteg
  ```
  2. Antes de conttinuar, configure o acesso ao banco de dados no arquivo
-`back-end/rafael-eteg/src/main/resources/application.yaml`:
+`docker-compose.yml`:
 
 ```yaml
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/eteg
-    username: postgres
-    password: 12345678
-  jpa:
-    hibernate:
-      ddl-auto: create #Após primeira execução, alterar para update
+- SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/{BANCO}
+- SPRING_DATASOURCE_USERNAME={USUARIO}
+- SPRING_DATASOURCE_PASSWORD={SENHA}
 ```
 
  3. Entre no diretório do back-end e faça o build.
