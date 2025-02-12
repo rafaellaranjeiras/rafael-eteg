@@ -1,6 +1,5 @@
 
-# API com Spring Boot
-
+# Cadastro de clientes
 Este projeto é um formulário de cadastro de clientes desenvolvido em Java com framework Spring Boot (back-end) e React (front-end). A API roda na porta **8080** e requer configuração do banco de dados no arquivo `application.yaml`. O front-end roda na porta **3000**.
 
 ## Tecnologias Utilizadas
