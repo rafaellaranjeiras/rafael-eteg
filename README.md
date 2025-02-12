@@ -11,22 +11,7 @@ Este projeto é um formulário de cadastro de clientes desenvolvido em Java com 
 - React 18
 - Node
 - Docker
-
-## Configuração do Banco de Dados
-Antes de iniciar a aplicação, configure o acesso ao banco de dados no arquivo
-`back-end/rafael-eteg/src/main/resources/application.yaml`:
-
-```yaml
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/eteg
-    username: postgres
-    password: 12345678
-  jpa:
-    hibernate:
-      ddl-auto: create #Após primeira execução, alterar para update
-```
-
+  
 ## Como Executar
 1. Primeiro, clone o repositório e entre no diretório.
  ```sh
