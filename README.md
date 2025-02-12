@@ -1,6 +1,8 @@
 
 # Cadastro de clientes
-Este projeto é um formulário de cadastro de clientes desenvolvido em Java com framework Spring Boot (back-end) e React (front-end). A API roda na porta **8080** e requer configuração do banco de dados no arquivo `application.yaml`. O front-end roda na porta **3000**.
+Este projeto é um formulário de cadastro de clientes desenvolvido em Java com framework Spring Boot (back-end) e React (front-end).
+
+A API roda na porta **8080** e requer configuração do banco de dados no arquivo `application.yaml`. O front-end roda na porta **3000**.
 
 ## Tecnologias Utilizadas
 - Java 21
@@ -39,7 +41,9 @@ Este projeto é um formulário de cadastro de clientes desenvolvido em Java com 
  docker-compose up --build
  ```
 A API estará acessível em `http://localhost:8080`.
+
 A documentação da API estará disponível em `http://localhost:8080/swagger-ui.html`
+
 A aplicação estará disponível em `http://localhost:3000/`.
 
 Após a primeira execução, para persistência dos dados, recomenda-se alterar o `ddl-auto` do back-end para `update` ou `none` no aquivo `back-end\rafael-eteg\src\main\resources\application.yaml`:
