@@ -42,6 +42,18 @@ A API estará acessível em `http://localhost:8080`.
 A documentação da API estará disponível em `http://localhost:8080/swagger-ui.html`
 A aplicação estará disponível em `http://localhost:3000/`.
 
+Após a primeira execução, para persistência dos dados, recomenda-se alterar o `ddl-auto` do back-end para `update` ou `none` no aquivo `back-end\rafael-eteg\src\main\resources\application.yaml`:
+
+```yaml
+spring:
+  ...
+  jpa:
+    ...
+    hibernate:
+      ddl-auto: update
+```
+
+
 ## Autor
 Desenvolvido por Rafael Laranjeiras.
 
