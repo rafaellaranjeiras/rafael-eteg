@@ -28,21 +28,36 @@ spring:
 ```
 
 ## Como Executar
-1. Primeiro, clone o repositório.
+1. Primeiro, clone o repositório e entre no diretório.
  ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-   2. Entre no diretório do back-end e faça o build.
-   ```sh
-   cd rafael-eteg\back-end\rafael-eteg\
-   mvn clean package
-   ```
-   3. Retorne à raiz e componha os containeres.
-   ``` sh
-   cd ..
-   cd ..
-   docker-compose up --build
-   ```
+ git clone https://github.com/rafaellaranjeiras/rafael-eteg.git
+ cd .\rafael-eteg
+ ```
+ 2. Antes de conttinuar, configure o acesso ao banco de dados no arquivo
+`back-end/rafael-eteg/src/main/resources/application.yaml`:
+
+```yaml
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/eteg
+    username: postgres
+    password: 12345678
+  jpa:
+    hibernate:
+      ddl-auto: create #Após primeira execução, alterar para update
+```
+
+ 3. Entre no diretório do back-end e faça o build.
+ ```sh
+ cd .\back-end\rafael-eteg\
+ mvn clean package
+ ```
+ 4. Retorne à raiz e componha os containeres.
+ ``` sh
+ cd ..
+ cd ..
+ docker-compose up --build
+ ```
 A API estará acessível em `http://localhost:8080`.
 A documentação da API estará disponível em `http://localhost:8080/swagger-ui.html`
 A aplicação estará disponível em `http://localhost:3000/`.
